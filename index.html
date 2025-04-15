@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -177,3 +179,58 @@
     }
   </style>
 </head>
+
+<body>
+
+  <header>
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+    <h1>Nubbin Device</h1>
+    <p class="tagline">“See more. Feel deeper. Experience differently.”</p>
+    <img src="https://via.placeholder.com/300x300.png?text=Nubbin+Device" alt="Nubbin Device" class="product-img"/>
+    <a href="https://yourcheckoutlink.com" class="cta-btn">Buy Now</a>
+  </header>
+
+  <section>
+    <h2>What is the Nubbin Device?</h2>
+    <p>
+      The Nubbin is a sleek, disk-shaped sensory device designed to enhance perception and alter consciousness.
+      Inspired by the Experiencer Disks seen in <em>Black Mirror</em>, it merges minimal hardware with maximum inner world impact.
+    </p>
+  </section>
+
+  <section>
+    <h2>How it Works</h2>
+    <p>
+      Simply place the Nubbin against your skin or hold it during rest. Through a proprietary interaction of micro-vibrations
+      and suggestion tech, it creates immersive pseudo-memory experiences that feel... real.
+    </p>
+  </section>
+
+  <section>
+    <h2>Experiences Shared</h2>
+    <div class="testimonials">
+      <p>“I saw a place that never existed—but I remember living there.”</p>
+      <p>“Felt like lucid dreaming, except I was wide awake.”</p>
+      <p>“I don’t know what happened. I just want to go back.”</p>
+    </div>
+  </section>
+
+  <section style="text-align: center;">
+    <a href="https://yourcheckoutlink.com" class="cta-btn">Order Yours Now</a>
+  </section>
+
+  <footer>
+    Nubbin Device — Experimental Consumer Tech.<br>
+    Not FDA approved. Use at your own curiosity.
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const isDark = html.getAttribute('data-theme') === 'dark';
+      html.setAttribute('data-theme', isDark ? 'light' : 'dark');
+    }
+  </script>
+
+</body>
+</html>
