@@ -1,10 +1,24 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Nubbin Device</title>
+
+  <!-- Meta Preview -->
+  <meta name="description" content="The Nubbin Device — futuristic sensory tech that redefines reality.">
+  <meta property="og:title" content="Nubbin Device">
+  <meta property="og:description" content="Futuristic sensory tech that redefines reality. Inspired by Black Mirror.">
+  <meta property="og:image" content="https://i.imgur.com/nEDv0Fb.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourgithubusername.github.io/your-repo-name">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://i.imgur.com/nEDv0Fb.png">
+
+  <!-- Preload Font -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" as="style">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Inter&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
   <style>
     :root {
       --bg: #0d0d0d;
@@ -86,6 +100,11 @@
       transform: translateY(20px);
       animation: fadeIn 1s ease forwards;
       animation-delay: 0.3s;
+
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(6px);
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
     }
 
     section:nth-of-type(2) { animation-delay: 0.5s; }
@@ -110,10 +129,18 @@
       text-decoration: none;
       display: inline-block;
       margin-top: 30px;
+
+      box-shadow: 0 0 12px var(--accent);
+      animation: pulseGlow 2s infinite alternate;
     }
 
     .cta-btn:hover {
       background: #00ccc2;
+    }
+
+    @keyframes pulseGlow {
+      from { box-shadow: 0 0 12px var(--accent); }
+      to { box-shadow: 0 0 20px var(--accent); }
     }
 
     .testimonials {
@@ -150,57 +177,3 @@
     }
   </style>
 </head>
-<body>
-
-  <header>
-    <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
-    <h1>Nubbin Device</h1>
-    <p class="tagline">“See more. Feel deeper. Experience differently.”</p>
-    <img src="https://i.imgur.com/LOWrmrz.png?text=Nubbin+Device" alt="Nubbin Device" class="product-img"/>
-    <a href="https://yourcheckoutlink.com" class="cta-btn">Buy Now</a>
-  </header>
-
-  <section>
-    <h2>What is the Nubbin Device?</h2>
-    <p>
-      The Nubbin is a sleek, disk-shaped sensory device designed to enhance perception and alter consciousness.
-      Inspired by the Experiencer Disks seen in <em>Black Mirror</em>, it merges minimal hardware with maximum inner world impact.
-    </p>
-  </section>
-
-  <section>
-    <h2>How it Works</h2>
-    <p>
-      Simply place the Nubbin against your skin or hold it during rest. Through a proprietary interaction of micro-vibrations
-      and suggestion tech, it creates immersive pseudo-memory experiences that feel... real.
-    </p>
-  </section>
-
-  <section>
-    <h2>Experiences Shared</h2>
-    <div class="testimonials">
-      <p>“I saw a place that never existed—but I remember living there.”</p>
-      <p>“Felt like lucid dreaming, except I was wide awake.”</p>
-      <p>“I don’t know what happened. I just want to go back.”</p>
-    </div>
-  </section>
-
-  <section style="text-align: center;">
-    <a href="https://yourcheckoutlink.com" class="cta-btn">Order Yours Now</a>
-  </section>
-
-  <footer>
-    Nubbin Device — Experimental Consumer Tech.<br>
-    Not FDA approved. Use at your own curiosity.
-  </footer>
-
-  <script>
-    function toggleTheme() {
-      const html = document.documentElement;
-      const isDark = html.getAttribute('data-theme') === 'dark';
-      html.setAttribute('data-theme', isDark ? 'light' : 'dark');
-    }
-  </script>
-
-</body>
-</html>
